@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Calculadora de Error Muestral")
+st.title("Calculadora Margen de Error")
 
 def calcular_error_muestral(universo, casos, nivel_confianza=1.96, p=0.5):
     """
