@@ -4,3 +4,4 @@ openpyxl
 pyxlsb  
 xlsxwriter
 numpy
+Authlib>=1.3.2
