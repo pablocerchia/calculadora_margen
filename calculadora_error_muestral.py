@@ -13,9 +13,12 @@ from io import BytesIO
 import streamlit as st
 import streamlit as st
 
-if not st.experimental_user.is_logged_in:
+import streamlit as st
+if st.button("Log in"):
     st.login("google")
-else:
+if st.experimental_user.is_logged_in:
+    if st.button("Log out"):
+        st.logout()
     st.write(f"Hello, {st.experimental_user.name}!")
 
 # def calcular_error_muestral(universo, casos, nivel_confianza=1.96, p=0.5):
