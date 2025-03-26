@@ -11,11 +11,11 @@ from io import BytesIO
 # st.title("Calculadora Margen de Error")
 
 import streamlit as st
-if st.button("Log in"):
-    st.login("auth0")
-if st.experimental_user.is_logged_in:
-    if st.button("Log out"):
-        st.logout()
+import streamlit as st
+
+if not st.experimental_user.is_logged_in:
+    st.login("google")
+else:
     st.write(f"Hello, {st.experimental_user.name}!")
 
 # def calcular_error_muestral(universo, casos, nivel_confianza=1.96, p=0.5):
